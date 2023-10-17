@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styled from "@emotion/styled";
-import { Button } from "stories/components/atoms/Button";
-import { Count } from "stories/components/atoms/Count";
+import { Button } from "components/atoms/Button";
+import { Count } from "components/atoms/Count";
 
 const Container = styled.div`
   display: flex;

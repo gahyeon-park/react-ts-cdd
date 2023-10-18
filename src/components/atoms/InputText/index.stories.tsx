@@ -11,5 +11,7 @@ export default meta;
 type Story = StoryObj<typeof InputText>;
 
 export const Default: Story = {
-  args: {}
+  args: {
+    value: "리액트란"
+  }
 };

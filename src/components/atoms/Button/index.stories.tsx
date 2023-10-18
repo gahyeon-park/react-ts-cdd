@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from "@storybook/react";
 
 import { Button } from ".";
 
@@ -10,8 +10,16 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof Button>;
 
-export const Default: Story = {
+export const RedButton: Story = {
   args: {
-    label: "기본 버튼"
+    label: "등록",
+  }
+};
+
+
+export const BluButton: Story = {
+  args: {
+    label: "닫기",
+    color: "#304ffe"
   }
 };

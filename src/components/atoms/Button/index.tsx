@@ -1,28 +1,37 @@
 import styled from "@emotion/styled";
 
-const Container = styled.button`
+type BtnStyleT = {
+  color: string;
+}
+
+const Container = styled.button<BtnStyleT>`
   border: none;
   color: #fff;
-  background-color: #ff5722;
+  background-color: ${(props) => props.color};
+  cursor: pointer;
   padding: 8px 16px;
   border-radius: 4px;
-  cursor: pointer;
 
   &:hover {
-    background-color: #ff5722;
-    opacity: 0.8;
+    background-color: ${(props) => props.color};
+    opacity: .8;
   }
 
   &:active {
-    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 5px 5px 18px rgba(0, 0, 0, .2);
   }
 `
 
-interface ButtonI {
+// interface ButtonI extends BtnStyleT {
+//   label: string;
+//   onClick?: () => void;
+// }
+
+type ButtonT = {
   label: string;
   onClick?: () => void;
-}
+} & BtnStyleT;
 
-export const Button = ({ label, onClick }: ButtonI) => {
-  return <Container onClick={onClick}>{label}</Container>
+export const Button = ({ label, color = "#ff5722", onClick }: ButtonT) => {
+  return <Container color={color} onClick={onClick}>{label}</Container>
 }

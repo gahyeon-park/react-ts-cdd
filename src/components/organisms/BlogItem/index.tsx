@@ -11,12 +11,16 @@ box-shadow: 10px 10px 30px #d9d9d9, -10px -10px 30px #fff;
 max-width: 800px;
 `
 
+interface BlogItemI {
+  title: string;
+  text: string;
+}
 
-export const BlogPost = () => {
+export const BlogItem = ({ title, text }: BlogItemI) => {
   return (
     <Container>
-      <BlogTitle title="blog heading" />
-      <BlogBody text="blog body" />
+      <BlogTitle title={title} />
+      <BlogBody text={text} />
     </Container>
   )
 }

@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
 type BtnStyleT = {
-  color: string;
+  color?: string;
 }
 
 const Container = styled.button<BtnStyleT>`

@@ -9,7 +9,7 @@ const Container = styled.div`
 interface InputI {
   label: string;
   value: string;
-  onChange: () => void;
+  onChange: (text: string) => void;
 }
 
 export const Input = ({ label, value, onChange }: InputI) => {
